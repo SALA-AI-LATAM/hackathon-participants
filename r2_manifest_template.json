@@ -1,0 +1,47 @@
+{
+  "bucket": "sala-hackathon",
+  "datasets": {
+    "precipitation-nowcasting": {
+      "description": "Weather station CSVs + LDAS gridded reanalysis for precipitation nowcasting",
+      "format": "csv+netcdf",
+      "total_size_bytes": 2236000000,
+      "shards": [
+        {"key": "precipitation-nowcasting/weather_stations/CER_consolid_f15.csv", "size_bytes": 22000000, "tags": ["stations"]},
+        {"key": "precipitation-nowcasting/weather_stations/JUN_consolid_f15.csv", "size_bytes": 22000000, "tags": ["stations"]},
+        {"key": "precipitation-nowcasting/weather_stations/MERC_consolid_f15.csv", "size_bytes": 22000000, "tags": ["stations"]},
+        {"key": "precipitation-nowcasting/weather_stations/MIRA_consolid_f15.csv", "size_bytes": 22000000, "tags": ["stations"]},
+        {"key": "precipitation-nowcasting/ldas/SURF_MOD_gal_001_daily_LIS_HIST.nc", "size_bytes": 1100000000, "tags": ["ldas"]},
+        {"key": "precipitation-nowcasting/ldas/ROUTING_gal_001_daily_LIS_HIST.nc", "size_bytes": 1050000000, "tags": ["ldas"]}
+      ]
+    },
+    "marine-acoustic-core": {
+      "description": "Curated subset of underwater audio (~7.3 GB, ~12h). 100 Pilot + 20 unit-6478 + 3 unit-5783 WAVs with temporal diversity.",
+      "format": "wav",
+      "total_size_bytes": 7300000000,
+      "shards": [
+        {"key": "marine-acoustic/Music_Soundtrap_Pilot/190806_3754.wav", "size_bytes": 2300000, "tags": ["core", "pilot"]},
+        {"key": "marine-acoustic/Music_Soundtrap_Pilot/190806_3761.wav", "size_bytes": 43200000, "tags": ["core", "pilot"]},
+        {"key": "marine-acoustic/Music_Soundtrap_Pilot/190806_3768.wav", "size_bytes": 43200000, "tags": ["core", "pilot"]},
+
+        "___PLACEHOLDER___: 97 more Pilot WAVs — generate full list during R2 upload",
+
+        {"key": "marine-acoustic/6478/6478.221019181113.wav", "size_bytes": 300000, "tags": ["core", "6478"]},
+        {"key": "marine-acoustic/6478/6478.230723191251.wav", "size_bytes": 115200000, "tags": ["core", "6478"]},
+
+        "___PLACEHOLDER___: 18 more 6478 WAVs + 20 XMLs — generate full list during R2 upload",
+
+        {"key": "marine-acoustic/5783/5783.040122170635.wav", "size_bytes": 345600000, "tags": ["core", "5783"]},
+        {"key": "marine-acoustic/5783/5783.040122220635.wav", "size_bytes": 345600000, "tags": ["core", "5783"]},
+        {"key": "marine-acoustic/5783/5783.040123030635.wav", "size_bytes": 345600000, "tags": ["core", "5783"]}
+      ]
+    },
+    "marine-acoustic-full": {
+      "description": "Full underwater audio dataset (~57 GB, ~97h). All 926 WAVs from 3 SoundTrap units.",
+      "format": "wav",
+      "total_size_bytes": 57000000000,
+      "shards": [
+        "___PLACEHOLDER___: generate full file list during R2 upload (926 WAVs + XMLs)"
+      ]
+    }
+  }
+}
