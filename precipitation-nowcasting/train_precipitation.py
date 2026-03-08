@@ -7,9 +7,9 @@ station (El Junco by default) at 3h, 6h, and 12h horizons.
 
 Equivalent to precipitation_nowcasting.ipynb sections 2-9, runnable as a standalone script.
 
-Usage:
-    python train_precipitation.py --data-dir ./weather_stations
-    python train_precipitation.py --data-dir ./weather_stations --target-station mira --epochs 30
+Usage (after R2 download):
+    python train_precipitation.py --data-dir ./precipitation-nowcasting
+    python train_precipitation.py --data-dir ./precipitation-nowcasting --target-station mira --epochs 30
 """
 
 import argparse
@@ -43,10 +43,10 @@ warnings.filterwarnings('ignore')
 # ============================================================================
 
 STATION_FILES = {
-    'cer': 'CER_consolid_f15.csv',
-    'jun': 'JUN_consolid_f15.csv',
-    'merc': 'MERC_consolid_f15.csv',
-    'mira': 'MIRA_consolid_f15.csv',
+    'cer': 'weather_stations/CER_consolid_f15.csv',
+    'jun': 'weather_stations/JUN_consolid_f15.csv',
+    'merc': 'weather_stations/MERC_consolid_f15.csv',
+    'mira': 'weather_stations/MIRA_consolid_f15.csv',
 }
 
 COLUMN_MAP = {
@@ -530,8 +530,8 @@ def save_eval_plots(y_true, y_prob, model_name, output_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='Multi-station precipitation nowcasting')
-    parser.add_argument('--data-dir', type=str, default='./weather_stations',
-                        help='Directory containing station CSV files')
+    parser.add_argument('--data-dir', type=str, default='./precipitation-nowcasting',
+                        help='Directory containing weather_stations/ and checkpoints/ subdirs (from R2 download)')
     parser.add_argument('--output-dir', type=str, default='./checkpoints',
                         help='Directory for checkpoints and results')
     parser.add_argument('--target-station', type=str, default='jun',

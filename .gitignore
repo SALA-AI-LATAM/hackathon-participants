@@ -1,0 +1,24 @@
+# Data files (downloaded from R2 bucket)
+precipitation-nowcasting/weather_stations/
+precipitation-nowcasting/ldas/
+precipitation-nowcasting/checkpoints/
+marine-accoustic-monitoring/examples/
+bruv-fish-counting/*.MP4
+bruv-fish-counting/Videos/
+
+# R2 download cache
+manifest.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+._*
+
+# Sandbox temp files
+.sandbox_tmp/

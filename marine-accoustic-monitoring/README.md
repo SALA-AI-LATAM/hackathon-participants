@@ -15,7 +15,7 @@ The full dataset is ~57 GB (926 WAV files, ~97 hours of audio). For Colab and qu
 | Subset | Size | Files | Audio | What's included |
 |--------|------|-------|-------|-----------------|
 | **`marine-acoustic-core`** | ~7.3 GB | 123 WAVs | ~12 hours | 100 Pilot + 20 unit-6478 + 3 unit-5783, temporally diverse |
-| **`marine-acoustic-full`** | ~57 GB | 926 WAVs | ~97 hours | Everything — all 3 units, all recordings |
+| `marine-acoustic-full` *(not yet uploaded)* | ~57 GB | 926 WAVs | ~97 hours | Everything — all 3 units, all recordings |
 
 ```python
 import r2_download as hd
@@ -23,7 +23,7 @@ import r2_download as hd
 # Core subset (recommended for Colab)
 stats = hd.download_dataset(manifest, dataset_name="marine-acoustic-core")
 
-# Full dataset (local/RunPod only — 57 GB)
+# Full dataset (local/RunPod only — 57 GB, not yet uploaded to R2)
 # stats = hd.download_dataset(manifest, dataset_name="marine-acoustic-full")
 ```
 
