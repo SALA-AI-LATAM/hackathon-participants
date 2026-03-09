@@ -6,6 +6,10 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SALA-AI-LATAM/hackathon-participants/blob/main/precipitation-nowcasting/precipitation_nowcasting.ipynb)
 
+## Challenge Guidelines
+
+**[`raincaster_guidelines.pdf`](raincaster_guidelines.pdf)** — the official RainCaster Galapagos Dataset guidelines. Covers the challenge rules, evaluation strategy (walk-forward validation over the final year), 3-class precipitation thresholds for each horizon, required metrics, submission CSV format, and deliverables for final judging. **Read this before starting your model.**
+
 ## Overview
 
 San Cristóbal Island in the Galápagos has a network of four weather stations operated by the Galápagos Science Center (GSC) and the Institute of Geography at Universidad San Francisco de Quito (USFQ). These stations record meteorological variables at 15-minute intervals and have been running since June 2015.
@@ -210,7 +214,11 @@ ds.close()
 
 ### Core Task — Precipitation Nowcasting
 
-Build a model that predicts heavy precipitation events at 3, 6, and 12-hour horizons using station time series data. Recommended approaches:
+Build a model that predicts precipitation intensity at **+1h, +3h, and +6h** horizons for all 4 weather stations. The official evaluation uses **3-class labels** (No rain / Light rain / Heavy rain) with horizon-dependent thresholds, **walk-forward validation** over the final year, and **Macro/Micro/Weighted F1** metrics — see [`raincaster_guidelines.pdf`](raincaster_guidelines.pdf) for full details.
+
+> **Note:** The starter notebook uses 3h/6h/12h horizons with binary labels as a teaching baseline. To match the official challenge, change `HORIZONS` to `{'1h': 4, '3h': 12, '6h': 24}` and implement 3-class labeling per the guidelines.
+
+Recommended approaches:
 
 - **RNN / LSTM / GRU** — sequence models that learn temporal dependencies in the multivariate time series
 - **XGBoost / LightGBM** — tree-based models with engineered lag features (e.g., rainfall in the last 1h, 3h, 6h; humidity trends; wind direction shifts)

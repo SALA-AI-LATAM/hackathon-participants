@@ -9,7 +9,7 @@ During this hackathon you'll work in teams to build machine learning solutions f
 
 | Track | Dataset | Size | What you'll do |
 |---|---|---|---|
-| 1. Precipitation Nowcasting | Weather station time series | ~2.4 GB | Predict heavy rain at 3/6/12h horizons |
+| 1. Precipitation Nowcasting | Weather station time series | ~2.4 GB | Predict heavy rain at 1/3/6h horizons — see [challenge guidelines](precipitation-nowcasting/raincaster_guidelines.pdf) |
 | 2. Marine Acoustic Monitoring | Underwater audio (SoundTrap hydrophones) | ~7.3 GB | Build AI pipelines for unlabeled ocean sounds |
 | 3. BRUV Fish Counting | Underwater video (BRUVs) | ~4 GB per sub-video | Count fish species — [Kaggle competition](https://www.kaggle.com/competitions/marine-conservation-with-migra-mar) |
 
