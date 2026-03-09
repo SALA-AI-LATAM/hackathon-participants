@@ -1,5 +1,11 @@
 # Precipitation Nowcasting — Dataset Guide
 
+## Starter Notebook
+
+**`precipitation_nowcasting.ipynb`** — walks you through loading and exploring the weather station data, preprocessing (gap handling, feature engineering, extreme event labeling), and training RNN/LSTM/GRU baselines for 3/6/12-hour precipitation nowcasting.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SALA-AI-LATAM/hackathon-participants/blob/main/precipitation-nowcasting/precipitation_nowcasting.ipynb)
+
 ## Overview
 
 San Cristóbal Island in the Galápagos has a network of four weather stations operated by the Galápagos Science Center (GSC) and the Institute of Geography at Universidad San Francisco de Quito (USFQ). These stations record meteorological variables at 15-minute intervals and have been running since June 2015.

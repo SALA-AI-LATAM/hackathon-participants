@@ -1,5 +1,11 @@
 # Track 3: BRUV Fish Counting — Marine Conservation with MigraMar
 
+## Starter Notebook
+
+**`bruv_explorer.ipynb`** — starter notebook for extracting frames from BRUV videos, visualizing them alongside CSV labels, and running a motion-based background subtraction baseline for fish detection.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SALA-AI-LATAM/hackathon-participants/blob/main/bruv-fish-counting/bruv_explorer.ipynb)
+
 > **V1 — This document is a starting point, not a recipe.** It provides context and
 > ideas for where to begin. The best projects will go in unexpected directions.
 > It may also contain errors — trust your own exploration over these suggestions.

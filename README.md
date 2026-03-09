@@ -4,7 +4,7 @@ AI for weather and marine ecology on San Cristóbal Island, Galápagos.
 
 ## Tracks
 
-### 1. Precipitation Nowcasting (`precipitation-nowcasting/`)
+### 1. [Precipitation Nowcasting](precipitation-nowcasting/)
 
 Predict heavy precipitation at 3, 6, and 12-hour horizons using meteorological time series from four inland weather stations. Includes a full starter notebook with EDA, preprocessing, and RNN/LSTM/GRU baselines.
 
@@ -17,7 +17,7 @@ Predict heavy precipitation at 3, 6, and 12-hour horizons using meteorological t
 | `ldas/*.nc` | NASA LDAS gridded reanalysis (daily, NetCDF) |
 | `checkpoints/` | Pre-trained baseline weights + evaluation plots |
 
-### 2. Marine Acoustic Monitoring (`marine-accoustic-monitoring/`)
+### 2. [Marine Acoustic Monitoring](marine-accoustic-monitoring/)
 
 
 Build AI pipelines to analyze unlabeled underwater audio from SoundTrap hydrophones deployed in the Bay of San Cristóbal. Dolphins, sea lions, snapping shrimp, boat noise — no labels, lots of signal. Two download options: **core** (~7.3 GB, 12h of audio — Colab-friendly) or **full** (~57 GB, 97h).
@@ -29,7 +29,7 @@ Build AI pipelines to analyze unlabeled underwater audio from SoundTrap hydropho
 | `README.md` | Hackathon guide — project ideas across 3 tiers + CETI bonus |
 | `examples/*.png` | Pre-generated spectrograms for each hydrophone unit |
 
-### 3. BRUV Fish Counting (`bruv-fish-counting/`)
+### 3. [BRUV Fish Counting](bruv-fish-counting/)
 
 Count fish species in underwater video from Baited Remote Underwater Video stations (BRUVs) deployed by MigraMar. Primary target: determine the maximum number of *Caranx caballus* (green jack) in a single frame. This track has a **Kaggle competition** for submissions.
 

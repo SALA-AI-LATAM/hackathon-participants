@@ -1,5 +1,11 @@
 # Marine Acoustic Monitoring — Hackathon Guide
 
+## Starter Notebook
+
+**`acoustic_explorer.ipynb`** — interactive notebook for loading underwater audio, plotting spectrograms (full-band and band-split), listening to clips in-browser, and exploring the SoundTrap hydrophone recordings.
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SALA-AI-LATAM/hackathon-participants/blob/main/marine-accoustic-monitoring/acoustic_explorer.ipynb)
+
 > **This document is a starting point, not a recipe.** It collects ideas, tools, and references to help you orient yourself — but it's V1, may contain errors, and is deliberately open-ended. Treat it as context to riff on, not instructions to follow step by step. The best hackathon projects will go in directions we didn't anticipate.
 
 ## Overview
