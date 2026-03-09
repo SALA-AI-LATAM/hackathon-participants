@@ -56,3 +56,5 @@ Label CSVs are on Kaggle. Videos (~65 GB) are on R2.
 3. Read the track's `README.md` for project ideas and background
 
 All three tracks are designed to be open-ended — the notebooks and guides give you a starting point, but the best projects will go in unexpected directions.
+
+For detailed setup instructions, RunPod usage, budget info, and environment guides, see **[HACKATHON_GUIDE.md](HACKATHON_GUIDE.md)**.
