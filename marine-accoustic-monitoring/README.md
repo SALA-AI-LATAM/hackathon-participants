@@ -12,7 +12,31 @@
 
 The Bay of San Cristóbal in the Galápagos is a critical habitat for marine mammals (dolphins, sea lions, possibly humpback whales) and also one of the highest maritime traffic areas in the archipelago. The Galápagos Science Center is building a Passive Acoustic Monitoring (PAM) system to continuously record the underwater soundscape.
 
-You have access to underwater audio from SoundTrap ST300 hydrophones deployed in the bay. Unlike the precipitation dataset, **this data has no labels** — nobody has annotated what sounds are in these recordings. Your challenge is to build AI pipelines that help marine biologists analyze this acoustic data.
+You have access to underwater audio from SoundTrap ST300 hydrophones deployed in the bay. Unlike the precipitation dataset, **this data has no labels** — nobody has annotated what sounds are in these recordings.
+
+### Important note on biological content
+
+The domain experts have not yet been able to verify the presence of marine animal
+vocalizations (dolphins, whales, sea lions) in these specific recordings. The data
+clearly contains broadband transients, boat noise, and ambient sounds — but confirmed
+biological signals may be sparse or absent in this particular deployment.
+
+**What this means for your project:** This track has two viable directions:
+
+1. **Technical pipeline (code-focused):** Build tools that *would* detect and classify
+   marine sounds if they are present — acoustic indices, pretrained model inference,
+   clustering pipelines, annotation tools. The methods are valuable regardless of
+   whether this dataset contains animal vocalizations, and can be applied to future
+   deployments where biological content is confirmed.
+
+2. **Research direction (research-focused):** Work with the domain expert (the domain experts)
+   to understand open problems and opportunities in marine bioacoustics for the
+   Galápagos. Conduct literature review, propose AI/data science research directions,
+   and present a research roadmap. Projects taking this path will be evaluated on
+   the quality of their research process and proposals, not on code artifacts.
+
+Both directions are equally valid. Talk to the domain experts early to align on which approach
+fits your team best.
 
 ### Core vs. Full Dataset
 
@@ -84,10 +108,11 @@ for pe in root.findall('.//PROC_EVENT'):
 
 ### What You'll Hear
 
-The recordings contain a mix of:
-- **Biological sounds**: dolphin whistles (5–20 kHz), echolocation clicks (broadband, up to 130 kHz), sea lion barks (200 Hz–4 kHz), snapping shrimp (broadband clicks, dominant 2–20 kHz), fish choruses (< 2 kHz)
-- **Anthropogenic noise**: boat engines (~100 Hz–1 kHz tonal + broadband), port operations
-- **Abiotic sounds**: waves, wind, rain (broadband impulsive)
+The recordings contain a mix of sound sources. **Note:** confirmed biological
+vocalizations may be sparse or absent in this dataset (see note above).
+
+- **Confirmed:** boat engines (~100 Hz–1 kHz tonal + broadband), port operations, broadband transients, ambient noise (waves, wind, rain)
+- **Possible biological sounds (unverified):** dolphin whistles (5–20 kHz), echolocation clicks (broadband, up to 130 kHz), sea lion barks (200 Hz–4 kHz), snapping shrimp (broadband clicks, dominant 2–20 kHz), fish choruses (< 2 kHz)
 
 ### Important: Most Data is in .sud Format
 

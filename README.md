@@ -20,7 +20,7 @@ Predict heavy precipitation at 3, 6, and 12-hour horizons using meteorological t
 ### 2. [Marine Acoustic Monitoring](marine-accoustic-monitoring/)
 
 
-Build AI pipelines to analyze unlabeled underwater audio from SoundTrap hydrophones deployed in the Bay of San Cristóbal. Dolphins, sea lions, snapping shrimp, boat noise — no labels, lots of signal. Two download options: **core** (~7.3 GB, 12h of audio — Colab-friendly) or **full** (~57 GB, 97h).
+Explore unlabeled underwater audio from SoundTrap hydrophones deployed in the Bay of San Cristóbal. Build AI pipelines for marine soundscape analysis, or work with domain experts to propose research directions for marine bioacoustics in the Galápagos. Two download options: **core** (~7.3 GB, 12h of audio — Colab-friendly) or **full** (~57 GB, 97h).
 
 | File | Description |
 |------|-------------|
