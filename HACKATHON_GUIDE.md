@@ -91,19 +91,22 @@ Each notebook includes setup cells at the top that handle installing dependencie
 
 ### 3.2 Configure R2 credentials
 
-The starter notebooks include a cell where you set your R2 credentials. Organizers will provide these values at the hackathon:
+Organizers will provide a `participant-download.env` file with R2 credentials. Each starter notebook has a credentials cell that supports two options:
+
+**Option A (recommended):** Upload `participant-download.env` to your Colab file panel (drag and drop), then run the credentials cell. It auto-detects the file and loads the values.
+
+**Option B:** Edit the placeholder values directly in the credentials cell:
 
 ```python
-import os
-os.environ["R2_ENDPOINT"] = "https://YOUR_ACCOUNT_ID.r2.cloudflarestorage.com"
+os.environ["R2_ENDPOINT"] = "https://..."
 os.environ["R2_ACCESS_KEY_ID"] = "YOUR_ACCESS_KEY"
 os.environ["R2_SECRET_ACCESS_KEY"] = "YOUR_SECRET_KEY"
 os.environ["R2_BUCKET"] = "sala-2026-hackathon-data"
 ```
 
 - **On RunPod:** Credentials may be pre-set as environment variables on your pod. Check before filling them in.
-- **On your laptop:** You can put these in a `.env` file instead (gitignored).
-- **On Google Colab:** Fill them in directly in the notebook cell.
+- **On your laptop:** Place `participant-download.env` in your working directory, or create a `.env` file (gitignored).
+- **On Google Colab:** Upload the `.env` file or paste credentials directly in the cell.
 
 ### 3.3 Download your track's data
 
