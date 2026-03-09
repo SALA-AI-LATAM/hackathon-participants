@@ -12,7 +12,7 @@ from pathlib import Path
 
 import boto3
 
-from tqdm.auto import tqdm
+from tqdm import tqdm
 
 
 # ============================================================================
@@ -236,7 +236,12 @@ def download_shards(shards, dest_dir, s3_client, bucket,
 
         # === Verify checksum ===
         if verify and checksum:
+            if not quiet:
+                size_mb = local_path.stat().st_size / 1e6
+                print(f"  Verifying checksum ({size_mb:.0f} MB)...", end=" ", flush=True)
             actual = _sha256_file(local_path)
+            if not quiet:
+                print("ok" if actual == checksum else "FAILED")
             if actual != checksum:
                 stats["failed"] += 1
                 stats["errors"].append({
