@@ -60,7 +60,7 @@ Downloads support **resume** — if interrupted, re-run the cell and it picks up
 
 When you stop and restart your pod:
 
-- Your **data** (`/workspace/hackathon_data/`) and **code** (`/workspace/`) are preserved
+- Your **data** (`/workspace/`) and **code** are preserved (backed by a persistent network volume)
 - You **do** need to re-run the pip install cell (installed packages don't persist)
 - You do **not** need to re-download data or re-upload credentials
 
@@ -68,7 +68,20 @@ Just open your notebook and run from the top — the download cell will skip fil
 
 ---
 
-## 6. Pulling Updates
+## 6. If You See a Migration Prompt
+
+RunPod may occasionally need to migrate your pod to a different server (e.g., when restarting a stopped pod whose GPU was reassigned). If you see a migration prompt:
+
+1. Choose **"Automatically migrate Pod data"**
+2. Wait for the migration to complete — this may take a few minutes
+3. Your data and credentials in `/workspace` are preserved (they live on a network volume)
+4. **Immediately notify organizers via WhatsApp with your new pod ID** — the budget watchdog tracks pods by ID, and an unregistered pod will be auto-stopped
+5. Share the new JupyterLab URL with your team (it changes after migration)
+6. Re-run the pip install cell in your notebook (installed packages don't persist across migrations)
+
+---
+
+## 7. Pulling Updates
 
 If the hackathon repo is updated during the event:
 

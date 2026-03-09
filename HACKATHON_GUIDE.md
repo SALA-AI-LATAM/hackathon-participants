@@ -199,6 +199,13 @@ RunPod is your team's paid GPU resource. Use it for serious training runs — no
 
 > Always stop your pod when your team is done working. A running pod bills by the second. There's an automatic safety timer, but don't rely on it.
 
+**Pod migration:** When restarting a stopped pod, RunPod may prompt you to migrate (this happens when the GPU was reassigned while stopped). If you see this:
+
+1. Choose **"Automatically migrate Pod data"** — your `/workspace` data is preserved on the network volume
+2. **Immediately message organizers via WhatsApp with the new pod ID** — the budget watchdog tracks by pod ID, and unregistered pods get auto-stopped
+3. The JupyterLab URL will change — re-share it with your team
+4. Re-run the pip install cell in your notebook
+
 **Rules:**
 - Only start/stop your team's pod — do not touch other teams' pods
 - Do not create new pods — unauthorized pods are automatically detected and terminated
@@ -212,7 +219,7 @@ Once your Dev starts the pod and shares the URL:
 2. You'll see a file browser on the left with `/workspace`
 3. Clone the hackathon repo if not already there, open your track's notebook
 
-The `/workspace` directory is persistent — your files survive pod stop/restart. Everything outside `/workspace` (like `/root` or `/tmp`) is wiped on stop.
+The `/workspace` directory lives on a persistent **network volume** — your files survive pod stop/restart and even pod migration. Everything outside `/workspace` (like `/root` or `/tmp`) is wiped on stop.
 
 **Suggested `/workspace` layout:**
 
